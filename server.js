@@ -68,7 +68,8 @@ app.get('/', function (req, res) {
     col.insert({ip: req.ip, date: Date.now()});
     col.count(function(err, count){
       if (err) {
-        console.log('Error running count. Message:\n'+err);
+          console.log('Error running count. Message:\n' + err);
+          res.send('Error happended durind mongo connection. ' + err);    
       }
       res.render('index.html', { pageCountMessage : count, dbInfo: dbDetails });
     });
@@ -90,6 +91,9 @@ app.get('/pagecount', function (req, res) {
   } else {
     res.send('{ pageCount: -1 }');
   }
+});
+app.get('/delay', function (req, res) {
+    res.send('delay path worked');
 });
 
 // error handling
