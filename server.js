@@ -93,8 +93,15 @@ app.get('/pagecount', function (req, res) {
   }
 });
 app.get('/delay', function (req, res) {
+    (async ()=>{
+        await timeout(2000);
+    })();
     res.send('delay path worked');
 });
+
+function timeout(ms){
+    return new Promise(resolve=>setTimeout(resolve,ms));
+}
 
 // error handling
 app.use(function(err, req, res, next){
