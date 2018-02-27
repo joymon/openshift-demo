@@ -71,10 +71,10 @@ app.get('/', function (req, res) {
           console.log('Error running count. Message:\n' + err);
           res.send('Error happended durind mongo connection. ' + err);    
       }
-      res.render('index.html', { pageCountMessage : count, dbInfo: dbDetails });
+      res.render('index.html', { pageCountMessage: count, dbInfo: dbDetails, node_version: process.version });
     });
   } else {
-    res.render('index.html', { pageCountMessage : null});
+      res.render('index.html', { pageCountMessage: null, node_version: process.version});
   }
 });
 
