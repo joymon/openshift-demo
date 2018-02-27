@@ -58,7 +58,9 @@ app.get('/', function (req, res) {
   // try to initialize the db on every request if it's not already
   // initialized.
   if (!db) {
-    initDb(function(err){});
+    initDb(function(err){
+        res.send('Error happended durind mongo connection. ' + err);    
+    });
   }
   if (db) {
     var col = db.collection('counts');
