@@ -93,9 +93,9 @@ app.get('/pagecount', function (req, res) {
   }
 });
 app.get('/delay', function (req, res) {
-    (async ()=>{
-        await timeout(2000);
-    })();
+    //(async ()=>{
+      //  await timeout(2000);
+    //})();
     res.send('delay path worked');
 });
 
