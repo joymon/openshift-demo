@@ -1,4 +1,4 @@
-
+> OpenShift removed their freemium plan. Now all the plans are paid with time restricted free trial.So this repo is more maintained. 
 
 <!-- toc -->
 
