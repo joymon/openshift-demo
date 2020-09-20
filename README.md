@@ -1,4 +1,4 @@
-> OpenShift removed their freemium plan. Now all the plans are paid with time restricted free trial.So this repo is more maintained. 
+> This repo was created when OpenShift had their freemium plan. It was helping to host small non-critical services. But now they removed freemium plan and all the plans are paid with time restricted free trial.So this repo is more maintained. 
 
 <!-- toc -->
 
